@@ -34,8 +34,6 @@ const SinglePost = ({ posts, post,  token, isMe}) => {
         postToRender = posts.find((post) => postId === post._id);
     }
 
-//  console.log("SinglePost post:", post)
-  console.log("SinglePost postToRender TOP:", postToRender)
 
 const postDelete = async (event) => {
     event.preventDefault();
@@ -49,7 +47,7 @@ const postDelete = async (event) => {
     
     history.push('/posts');
     window.location.reload()
-    // console.log(data)
+
   };
 
    return (
@@ -106,8 +104,12 @@ const postDelete = async (event) => {
 
         : 
         <>
-            <p style ={{color: "yellow" , background:"black", borderRadius: "5px",
-    border:"black"}}><b>Interested? Message to This Post.</b></p>
+            <p style ={{color: "yellow" , 
+                        background:"black", 
+                        borderRadius: "5px",
+                        border:"black"}}>
+                            <b>Interested? Message to This Post.</b>
+            </p>
             <WriteAMessage postId={postToRender._id} token={token} />
         </>
         }

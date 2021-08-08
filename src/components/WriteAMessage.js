@@ -5,8 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const WriteAMessage = ({ postId, token }) => {
 
-const [ writemessage, setWriteMessage ] = useState('')
-   
+const [ writemessage, setWriteMessage ] = useState('')   
 
 const useStyles = makeStyles( (theme)  => ({
     button : {
@@ -26,7 +25,6 @@ const submitMessage = async (event) =>{
             method: 'POST',
             token,
         });
-        console.log('sent message', data)
         setWriteMessage('')
         window.alert("Thank you for your message.")
 }

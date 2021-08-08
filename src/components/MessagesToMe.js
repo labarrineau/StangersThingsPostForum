@@ -4,10 +4,8 @@ import { useParams } from 'react-router-dom';
 
 
 const MessagesToMe = ({ posts, post,  token}) => {
-// console.log( "messagestome", posts, post)
 
     const { postId } = useParams();
- 
 
     if (posts?.length === 0) return null;
 
@@ -18,7 +16,7 @@ const MessagesToMe = ({ posts, post,  token}) => {
     } else {
         postToRender = posts?.find((post) => postId === post._id);
     }
- console.log("messagetome post", post)
+
     return (
 
             <>

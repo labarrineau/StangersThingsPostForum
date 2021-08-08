@@ -8,11 +8,10 @@ import CreateNewPost from './CreateNewPost';
 import EditPost from './EditPost';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
-import { spacing } from '@material-ui/system'
 import Box from '@material-ui/core/Box'
 
 
-const useStyles = makeStyles( theme => ({
+const useStyles = makeStyles( (theme) => ({
     button : {
         backgroundColor : "#C19A6B",
         color: "black"
@@ -49,8 +48,6 @@ const App = () => {
     const [userData, setUserData] = useState({});
     const [posts, setPosts] = useState([]);
 
-    // const { postId } = useParams();
- 
     const isLoggedIn = userData.username !== undefined;
 
 
@@ -77,11 +74,8 @@ const App = () => {
         setUserData(data);
     }, [token]);
 
-    // console.log("app.js userData.messages", userData.messages)
-    // console.log("app.js userData", userData)
-
  
-     return(
+    return(
         <>
     <div id="pageContainer">
 

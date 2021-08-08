@@ -6,8 +6,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 
 const CreateNewPost = ({token}) => {
-
-    
+  
 
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
